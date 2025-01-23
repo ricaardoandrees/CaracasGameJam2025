@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck6n65v2erka8"]
+
+[ext_resource type="PackedScene" uid="uid://c4xfoq0b1jr8p" path="res://Scenes/PlayerBurbuja.tscn" id="1_djnlt"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w8cmo"]
+distance = -34.0
+
+[node name="Game" type="Node2D"]
+
+[node name="PlayerBurbuja" parent="." instance=ExtResource("1_djnlt")]
+position = Vector2(-430, -316)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-10, -4)
+shape = SubResource("WorldBoundaryShape2D_w8cmo")
