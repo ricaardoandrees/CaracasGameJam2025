@@ -9,6 +9,7 @@ var had_jump: bool= false
 var maxjumps: int = 2
 var actualjumps: int = 0
 @onready var balla_burbuja = preload("res://Scenes/balla_burbuja.tscn")
+var presionado: bool = false
 
 
 func _ready():
@@ -42,6 +43,16 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		actualjumps += 1
 		
+	if Input.is_action_pressed("inflar"):
+		animated_sprite_2d.play("inflar")
+	elif Input.is_action_just_released("inflar"):
+			animated_sprite_2d.stop()
+	if Input.is_action_pressed("suicidarse"):
+		animated_sprite_2d.play("muerte")
+
+
+		
+
 
 
 func _input(event):
