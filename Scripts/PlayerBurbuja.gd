@@ -46,6 +46,8 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_pressed("inflar"):
 		animated_sprite_2d.play("inflar")
+		animated_sprite_2d.scale *= 1.02
+		collision_shape_2d.scale *= 1.02
 	elif Input.is_action_just_released("inflar"):
 			animated_sprite_2d.stop()
 	if Input.is_action_pressed("suicidarse"):
