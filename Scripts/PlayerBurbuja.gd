@@ -1,5 +1,6 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var collision_shape_2d = $CollisionShape2D
 
 
 const SPEED = 100.0
@@ -65,6 +66,8 @@ func _input(event):
 		var instancia = balla_burbuja.instantiate()
 		instancia.position = animated_sprite_2d.global_position
 		instancia.DIRECTION = DIRECTION
+		animated_sprite_2d.scale *= 0.8
+		collision_shape_2d.scale *= 0.8
 		get_parent().add_child(instancia)
 		
 		
