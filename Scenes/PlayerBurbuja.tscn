@@ -122,6 +122,7 @@ animations = [{
 radius = 8.0
 
 [node name="Burbujita" type="CharacterBody2D"]
+z_index = 5
 script = ExtResource("1_ls6wi")
 
 [node name="balla_burbuja" parent="." instance=ExtResource("2_lxsdf")]

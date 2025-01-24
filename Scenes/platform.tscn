@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2irvdx7ddlqc"]
+
+[ext_resource type="Texture2D" uid="uid://duf0sxnxx63h6" path="res://Assets/Sprites/Estructuras Game Jam 1024x1024.png" id="1_8o6i3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vth2"]
+size = Vector2(53, 23)
+
+[node name="Platform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(436.25, 237.75)
+scale = Vector2(0.586021, 0.730769)
+texture = ExtResource("1_8o6i3")
+region_enabled = true
+region_rect = Rect2(0.115784, 254.602, 95.5893, 32.4424)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(436.5, 237.5)
+shape = SubResource("RectangleShape2D_3vth2")
+one_way_collision = true
