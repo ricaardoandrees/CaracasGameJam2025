@@ -27,6 +27,7 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		had_jump=false
 		actualjumps=0 
+		animated_sprite_2d.play("idle")
 	#estoy resenteando estos valores para llevar un control de ellos cuando llegue al piso
 		
 
@@ -34,13 +35,11 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	if Input.is_action_just_pressed("saltar") and actualjumps<maxjumps:
+		animated_sprite_2d.play("salto")
 		velocity.y = JUMP_VELOCITY
 		actualjumps += 1
+		
 
-		
-		
-		
-		
 
 func _input(event):
 	if event.is_action_pressed("izquierda"):
