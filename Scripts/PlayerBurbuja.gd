@@ -17,6 +17,7 @@ var presionado: bool = false
 
 func _ready():
 	escalaMIN = animated_sprite_2d.scale * 0.6
+	print(escalaMIN)
 	
 
 
@@ -73,8 +74,9 @@ func _input(event):
 		var instancia = balla_burbuja.instantiate()
 		instancia.position = animated_sprite_2d.global_position
 		instancia.DIRECTION = DIRECTION
-		animated_sprite_2d.scale *=  (animated_sprite_2d.scale * 0.9) if (escalaMIN < animated_sprite_2d.scale) else escalaMIN
-		collision_shape_2d.scale *=  (animated_sprite_2d.scale * 0.9) if (escalaMIN < animated_sprite_2d.scale) else escalaMIN
+		print()
+		animated_sprite_2d.scale = (animated_sprite_2d.scale * 0.9) if (escalaMIN > animated_sprite_2d.scale) else escalaMIN
+		collision_shape_2d.scale = (animated_sprite_2d.scale * 0.9) if (escalaMIN > animated_sprite_2d.scale) else escalaMIN
 		get_parent().add_child(instancia)
 	if event.is_action_pressed("suicidarse"):
 		print("muelto")
