@@ -3,8 +3,13 @@ extends CharacterBody2D
 
 
 const SPEED = 150.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -200.0
 var DIRECTION = 1
+var had_jump: bool= false
+var maxjumps: int = 2
+var actualjumps: int = 0
+
+
 
 
 func _process(delta):
@@ -15,17 +20,27 @@ func _process(delta):
 	
 
 func _physics_process(delta: float) -> void:
-	 #Add the gravity.
+	 
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+		
+	if is_on_floor():
+		had_jump=false
+		actualjumps=0 
+	#estoy resenteando estos valores para llevar un control de ellos cuando llegue al piso
+		
 
 	velocity.x = SPEED * Input.get_axis("izquierda", "derecha")
 	move_and_slide()
-	 #Handle jump.
-	if Input.is_action_just_pressed("saltar") and is_on_floor():
+	
+	if Input.is_action_just_pressed("saltar") and actualjumps<maxjumps:
 		velocity.y = JUMP_VELOCITY
-		move_and_slide()
+		actualjumps += 1
 
+		
+		
+		
+		
 
 func _input(event):
 	if event.is_action_pressed("izquierda"):

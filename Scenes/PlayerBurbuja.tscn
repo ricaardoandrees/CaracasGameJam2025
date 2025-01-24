@@ -42,8 +42,8 @@ animations = [{
 "texture": SubResource("AtlasTexture_c770i")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"idle",
+"speed": 4.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_phpb1"]
@@ -56,8 +56,8 @@ script = ExtResource("1_ls6wi")
 position = Vector2(420, 320)
 scale = Vector2(0.64, 0.646667)
 sprite_frames = SubResource("SpriteFrames_uobht")
-autoplay = "default"
-frame_progress = 0.237638
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(419, 316)
