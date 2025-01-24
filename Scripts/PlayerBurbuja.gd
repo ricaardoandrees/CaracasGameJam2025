@@ -64,6 +64,7 @@ func _input(event):
 		print("piu piu")
 		var instancia = balla_burbuja.instantiate()
 		instancia.position = animated_sprite_2d.global_position
+		instancia.DIRECTION = DIRECTION
 		get_parent().add_child(instancia)
 		
 		
