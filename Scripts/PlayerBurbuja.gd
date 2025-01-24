@@ -78,7 +78,7 @@ func _input(event):
 		instancia.DIRECTION = DIRECTION
 		print()
 		if contador_disparos<6:
-			animated_sprite_2d.scale = (animated_sprite_2d.scale * 0.9) if (escalaMIN < animated_sprite_2d.scale) else escalaMIN
+			animated_sprite_2d.scale = (animated_sprite_2d.scale * 0.9 ) if (escalaMIN < animated_sprite_2d.scale) else escalaMIN
 			collision_shape_2d.scale = (animated_sprite_2d.scale * 0.9) if (escalaMIN < animated_sprite_2d.scale) else escalaMIN
 		
 		get_parent().add_child(instancia)
