@@ -8,8 +8,11 @@ var DIRECTION = 1
 var had_jump: bool= false
 var maxjumps: int = 2
 var actualjumps: int = 0
+@onready var balla_burbuja = preload("res://Scenes/balla_burbuja.tscn")
 
 
+func _ready():
+	pass
 
 
 func _process(delta):
@@ -46,6 +49,12 @@ func _input(event):
 		DIRECTION = -1
 	if event.is_action_pressed("derecha"):
 		DIRECTION = 1
+	if event.is_action_pressed("disparar"):
+		print("piu piu")
+		var instancia = balla_burbuja.instantiate()
+		instancia.position = animated_sprite_2d.global_position
+		get_parent().add_child(instancia)
+		
 		
 
 	

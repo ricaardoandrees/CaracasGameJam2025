@@ -10,8 +10,7 @@ distance = -34.0
 [node name="PlayerBurbuja" parent="." instance=ExtResource("1_djnlt")]
 position = Vector2(-430, -316)
 
-[node name="Camera2D" type="Camera2D" parent="PlayerBurbuja"]
-position = Vector2(430, 316)
+[node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
