@@ -2,7 +2,7 @@ extends Area2D
 
 var DIRECTION = 1
 var SPEED = 100
-
+#
 #func _init(direction):
 	#print("me creo")
 	#DIRECTION = direction
@@ -16,5 +16,5 @@ func _process(delta):
 	
 
 func _physics_process(delta: float) -> void:
-	position.x += 4
+	position.x += 4 * DIRECTION
 	

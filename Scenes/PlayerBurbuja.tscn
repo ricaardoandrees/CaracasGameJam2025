@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c4xfoq0b1jr8p"]
+[gd_scene load_steps=19 format=3 uid="uid://c4xfoq0b1jr8p"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerBurbuja.gd" id="1_ls6wi"]
 [ext_resource type="PackedScene" uid="uid://b4xkjh07axl8u" path="res://Scenes/balla_burbuja.tscn" id="2_lxsdf"]
@@ -24,6 +24,34 @@ region = Rect2(96, 0, 32, 32)
 atlas = ExtResource("2_rlhbf")
 region = Rect2(128, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfp5t"]
+atlas = ExtResource("2_rlhbf")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4h5h"]
+atlas = ExtResource("2_rlhbf")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oidex"]
+atlas = ExtResource("2_rlhbf")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlwrr"]
+atlas = ExtResource("2_rlhbf")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lu6c4"]
+atlas = ExtResource("2_rlhbf")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3kim"]
+atlas = ExtResource("2_rlhbf")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80jxw"]
+atlas = ExtResource("2_rlhbf")
+region = Rect2(192, 64, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_2xd2g"]
 atlas = ExtResource("2_rlhbf")
 region = Rect2(192, 0, 32, 32)
@@ -46,21 +74,52 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_c887q")
 }],
-"loop": true,
+"loop": false,
 "name": &"idle",
 "speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_qfp5t")
+}],
+"loop": false,
+"name": &"inflar",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4h5h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oidex")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlwrr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lu6c4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3kim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80jxw")
+}],
+"loop": false,
+"name": &"muerte",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_2xd2g")
 }],
-"loop": true,
+"loop": false,
 "name": &"salto",
 "speed": 4.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_phpb1"]
-radius = 14.0357
+radius = 6.08276
 
 [node name="Burbujita" type="CharacterBody2D"]
 script = ExtResource("1_ls6wi")
@@ -73,8 +132,7 @@ position = Vector2(420, 320)
 scale = Vector2(0.64, 0.646667)
 sprite_frames = SubResource("SpriteFrames_uobht")
 animation = &"salto"
-autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(419, 316)
+position = Vector2(420, 320)
 shape = SubResource("CircleShape2D_phpb1")
