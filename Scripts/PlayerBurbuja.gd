@@ -9,12 +9,15 @@ var DIRECTION = 1
 var had_jump: bool= false
 var maxjumps: int = 2
 var actualjumps: int = 0
+var peso = 1
+var escalaMIN
 @onready var balla_burbuja = preload("res://Scenes/balla_burbuja.tscn")
 var presionado: bool = false
 
 
 func _ready():
-	pass
+	escalaMIN = animated_sprite_2d.scale * 0.6
+	
 
 
 func _process(delta):
@@ -27,9 +30,9 @@ func _process(delta):
 func _physics_process(delta: float) -> void:
 	 
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity += (get_gravity() * delta * (peso**0.1)) if( velocity.y < 0) else (get_gravity() * delta * peso)
 		
-	if is_on_floor():
+	if is_on_floor() and (not animated_sprite_2d.is_playing()):
 		had_jump=false
 		actualjumps=0 
 		animated_sprite_2d.play("idle")
@@ -46,12 +49,13 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_pressed("inflar"):
 		animated_sprite_2d.play("inflar")
-		animated_sprite_2d.scale *= 1.02
-		collision_shape_2d.scale *= 1.02
+		peso = 0.01
+		#animated_sprite_2d.scale *= 1.02
+		#collision_shape_2d.scale *= 1.02
 	elif Input.is_action_just_released("inflar"):
 			animated_sprite_2d.stop()
-	if Input.is_action_pressed("suicidarse"):
-		animated_sprite_2d.play("muerte")
+			peso = 1
+
 
 
 		
@@ -64,13 +68,18 @@ func _input(event):
 	if event.is_action_pressed("derecha"):
 		DIRECTION = 1
 	if event.is_action_pressed("disparar"):
+		animated_sprite_2d.play()
 		print("piu piu")
 		var instancia = balla_burbuja.instantiate()
 		instancia.position = animated_sprite_2d.global_position
 		instancia.DIRECTION = DIRECTION
-		animated_sprite_2d.scale *= 0.8
-		collision_shape_2d.scale *= 0.8
+		animated_sprite_2d.scale *=  (animated_sprite_2d.scale * 0.9) if (escalaMIN < animated_sprite_2d.scale) else escalaMIN
+		collision_shape_2d.scale *=  (animated_sprite_2d.scale * 0.9) if (escalaMIN < animated_sprite_2d.scale) else escalaMIN
 		get_parent().add_child(instancia)
+	if event.is_action_pressed("suicidarse"):
+		print("muelto")
+		animated_sprite_2d.play("muerte")
+		print("mori")
 		
 		
 

@@ -74,7 +74,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_c887q")
 }],
-"loop": true,
+"loop": false,
 "name": &"idle",
 "speed": 4.0
 }, {
@@ -82,7 +82,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qfp5t")
 }],
-"loop": true,
+"loop": false,
 "name": &"inflar",
 "speed": 3.0
 }, {
@@ -105,15 +105,15 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_80jxw")
 }],
-"loop": true,
+"loop": false,
 "name": &"muerte",
-"speed": 4.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2xd2g")
 }],
-"loop": true,
+"loop": false,
 "name": &"salto",
 "speed": 4.0
 }]
@@ -131,8 +131,7 @@ scale = Vector2(0.461037, 0.0534474)
 position = Vector2(420, 320)
 scale = Vector2(0.64, 0.646667)
 sprite_frames = SubResource("SpriteFrames_uobht")
-animation = &"idle"
-frame_progress = 0.379983
+animation = &"salto"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(420, 320)
