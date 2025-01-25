@@ -12,6 +12,7 @@ var contador = 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.global_position.x += 141
+	self.global_position.y -= 5
 	animated_sprite_2d.play("default")
 	pass # Replace with function body.
 

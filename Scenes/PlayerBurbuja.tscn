@@ -148,6 +148,7 @@ radius = 8.0
 
 [node name="Burbujita" type="CharacterBody2D"]
 z_index = 5
+scale = Vector2(1.5527, 1.65811)
 script = ExtResource("1_ls6wi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -155,8 +156,6 @@ position = Vector2(2, 0)
 scale = Vector2(0.64, 0.646667)
 sprite_frames = SubResource("SpriteFrames_uobht")
 animation = &"disparar"
-frame = 2
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1.2207, 0.99313)

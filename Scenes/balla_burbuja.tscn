@@ -56,7 +56,7 @@ scale = Vector2(-0.490897, 2.84347)
 shape = SubResource("CircleShape2D_85a4d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.98587, -4.66498)
+scale = Vector2(1.02285, -6.93839)
 sprite_frames = SubResource("SpriteFrames_8kiiq")
 animation = &"collision"
 
