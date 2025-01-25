@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://c4xfoq0b1jr8p"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerBurbuja.gd" id="1_ls6wi"]
-[ext_resource type="PackedScene" path="res://Scenes/balla_burbuja.tscn" id="2_lxsdf"]
+[ext_resource type="PackedScene" uid="uid://b4xkjh07axl8u" path="res://Scenes/balla_burbuja.tscn" id="2_lxsdf"]
 [ext_resource type="Texture2D" uid="uid://cic50vcb62rkm" path="res://Assets/Sprites/Pruebas 2.png" id="2_rlhbf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cdwa2"]
