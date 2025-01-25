@@ -88,20 +88,9 @@ func _input(event):
 		if contador_disparos<6:
 			animated_sprite_2d.scale = (animated_sprite_2d.scale * 0.9 ) if (escalaMIN < animated_sprite_2d.scale) else escalaMIN
 			collision_shape_2d.scale = (animated_sprite_2d.scale * 0.9) if (escalaMIN < animated_sprite_2d.scale) else escalaMIN
-			 
-
-		get_parent().add_child(instancia)
-	if event.is_action_pressed("suicidarse"):
-		print("muelto")
-		animated_sprite_2d.play("muerte")
-		print("mori")
-		
-		
-
-	
+			get_parent().add_child(instancia)
 
 
 func _on_animated_sprite_2d_animation_finished():
-	print("aaa")
 	if animated_sprite_2d.animation == "muerte":
 		get_tree().reload_current_scene()
