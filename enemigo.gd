@@ -4,6 +4,7 @@ extends Node2D
 @onready var ray_cast_dere = $killzone/RayCastDere
 @onready var ray_cast_izq = $killzone/RayCastIzq
 @onready var killzone = $killzone
+@onready var ray_cast_arr = $killzone/RayCastArr
 
 
 

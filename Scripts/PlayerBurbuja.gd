@@ -51,11 +51,11 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		actualjumps += 1
 		
-	if Input.is_action_pressed("inflar"):
+	if Input.is_action_pressed("inflar") and  (not (animated_sprite_2d.animation == "muerte")) :
 		animated_sprite_2d.play("inflar")
 		peso = 0.01
 
-	elif Input.is_action_just_released("inflar"):
+	elif Input.is_action_just_released("inflar")  and  (not (animated_sprite_2d.animation == "muerte")):
 			animated_sprite_2d.stop()
 			peso = 1
 
@@ -66,6 +66,8 @@ func _physics_process(delta: float) -> void:
 
 func muelto():
 	animated_sprite_2d.play("muerte")
+
+
 
 
 func _input(event):
@@ -97,3 +99,9 @@ func _input(event):
 		
 
 	
+
+
+func _on_animated_sprite_2d_animation_finished():
+	print("aaa")
+	if animated_sprite_2d.animation == "muerte":
+		get_tree().reload_current_scene()

@@ -28,16 +28,24 @@ position = Vector2(-1, 1.5)
 shape = SubResource("RectangleShape2D_7pq5y")
 
 [node name="RayCastDere" type="RayCast2D" parent="killzone"]
+visible = false
 target_position = Vector2(61, 1)
 
 [node name="RayCastDerePiso" type="RayCast2D" parent="killzone"]
+visible = false
 target_position = Vector2(102, 76)
 
 [node name="RayCastIZQPiso" type="RayCast2D" parent="killzone"]
+visible = false
 target_position = Vector2(-86, 78)
 
 [node name="RayCastIzq" type="RayCast2D" parent="killzone"]
+visible = false
 target_position = Vector2(-62, 0)
+
+[node name="RayCastArr" type="RayCast2D" parent="killzone"]
+visible = false
+target_position = Vector2(0, -64)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 2)
