@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://ck6n65v2erka8"]
+[gd_scene load_steps=12 format=4 uid="uid://ck6n65v2erka8"]
 
 [ext_resource type="PackedScene" uid="uid://c4xfoq0b1jr8p" path="res://Scenes/PlayerBurbuja.tscn" id="1_djnlt"]
 [ext_resource type="PackedScene" uid="uid://ey8g66byjq6j" path="res://enemigo.tscn" id="1_mceml"]
 [ext_resource type="Texture2D" uid="uid://duf0sxnxx63h6" path="res://Assets/Sprites/Estructuras Game Jam 1024x1024.png" id="2_b0hw4"]
 [ext_resource type="PackedScene" uid="uid://d2irvdx7ddlqc" path="res://Scenes/platform.tscn" id="3_01bsk"]
 [ext_resource type="PackedScene" uid="uid://c76t4shxj5lv0" path="res://Scenes/bottle.tscn" id="4_pur44"]
+[ext_resource type="PackedScene" uid="uid://bh34wj671mcql" path="res://obtaculo.tscn" id="6_tpsih"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k8siv"]
 texture = ExtResource("2_b0hw4")
@@ -360,3 +361,10 @@ position = Vector2(185, -319)
 z_index = 2
 z_as_relative = false
 position = Vector2(229, -310)
+
+[node name="obtaculo" parent="." instance=ExtResource("6_tpsih")]
+position = Vector2(807, -39)
+
+[node name="obtaculo2" parent="." instance=ExtResource("6_tpsih")]
+position = Vector2(136, -78)
+scale = Vector2(0.614127, 0.149153)

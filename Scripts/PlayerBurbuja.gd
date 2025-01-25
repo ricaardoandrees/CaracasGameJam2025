@@ -51,11 +51,11 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		actualjumps += 1
 		
-	if Input.is_action_pressed("inflar"):
+	if Input.is_action_pressed("inflar") and  (not (animated_sprite_2d.animation == "muerte")) :
 		animated_sprite_2d.play("inflar")
 		peso = 0.01
 
-	elif Input.is_action_just_released("inflar"):
+	elif Input.is_action_just_released("inflar")  and  (not (animated_sprite_2d.animation == "muerte")):
 			animated_sprite_2d.stop()
 			peso = 1
 
@@ -68,6 +68,8 @@ func muelto():
 	animated_sprite_2d.play("muerte")
 
 
+
+
 func _input(event):
 	if event.is_action_pressed("izquierda"):
 		DIRECTION = -1
@@ -77,17 +79,17 @@ func _input(event):
 	if event.is_action_pressed("disparar"):
 		contador_disparos+=1
 		little = true
-		animated_sprite_2d.play()
+		animated_sprite_2d.play("disparar")
 		print("piu piu")
 		var instancia = balla_burbuja.instantiate()
-		instancia.position = global_position
-		instancia.scale = animated_sprite_2d.global_scale
+		instancia.global_position = global_position
+
 		instancia.DIRECTION = DIRECTION
 		if contador_disparos<6:
 			animated_sprite_2d.scale = (animated_sprite_2d.scale * 0.9 ) if (escalaMIN < animated_sprite_2d.scale) else escalaMIN
 			collision_shape_2d.scale = (animated_sprite_2d.scale * 0.9) if (escalaMIN < animated_sprite_2d.scale) else escalaMIN
 			 
-		print("nueva instancia")
+
 		get_parent().add_child(instancia)
 	if event.is_action_pressed("suicidarse"):
 		print("muelto")
@@ -97,3 +99,9 @@ func _input(event):
 		
 
 	
+
+
+func _on_animated_sprite_2d_animation_finished():
+	print("aaa")
+	if animated_sprite_2d.animation == "muerte":
+		get_tree().reload_current_scene()

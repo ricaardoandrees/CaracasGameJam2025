@@ -3,6 +3,8 @@ extends Node2D
 @onready var ray_cast_izq_piso = $killzone/RayCastIZQPiso
 @onready var ray_cast_dere = $killzone/RayCastDere
 @onready var ray_cast_izq = $killzone/RayCastIzq
+@onready var killzone = $killzone
+@onready var ray_cast_arr = $killzone/RayCastArr
 
 
 
@@ -14,3 +16,5 @@ func _process(delta):
 	if (ray_cast_izq.is_colliding()) or ( not ray_cast_izq_piso.is_colliding()):
 		direction = 1
 	position.x += delta * direction * 60
+	
+	
