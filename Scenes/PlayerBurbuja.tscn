@@ -1,7 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://c4xfoq0b1jr8p"]
+[gd_scene load_steps=18 format=3 uid="uid://c4xfoq0b1jr8p"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerBurbuja.gd" id="1_ls6wi"]
-[ext_resource type="PackedScene" path="res://Scenes/balla_burbuja.tscn" id="2_lxsdf"]
 [ext_resource type="Texture2D" uid="uid://cic50vcb62rkm" path="res://Assets/Sprites/Pruebas 2.png" id="2_rlhbf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cdwa2"]
@@ -125,15 +124,12 @@ radius = 8.0
 z_index = 5
 script = ExtResource("1_ls6wi")
 
-[node name="balla_burbuja" parent="." instance=ExtResource("2_lxsdf")]
-scale = Vector2(0.461037, 0.0534474)
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(420, 320)
+position = Vector2(1, 1)
 scale = Vector2(0.64, 0.646667)
 sprite_frames = SubResource("SpriteFrames_uobht")
 animation = &"salto"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(420, 320)
+position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_phpb1")

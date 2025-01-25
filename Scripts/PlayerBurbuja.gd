@@ -11,13 +11,16 @@ var actualjumps: int = 0
 var peso = 1
 var escalaMIN : Vector2
 @onready var balla_burbuja = preload("res://Scenes/balla_burbuja.tscn")
-var presionado: bool = false
 var contador_disparos: int= 0
+var little: bool = false
+var escalaINICIAL : Vector2
+
 
 
 func _ready():
 	escalaMIN = animated_sprite_2d.scale * 0.6
 	print(escalaMIN)
+	escalaINICIAL = animated_sprite_2d.scale
 	
 
 
@@ -70,17 +73,18 @@ func _input(event):
 		
 	if event.is_action_pressed("disparar"):
 		contador_disparos+=1
+		little = true
 		animated_sprite_2d.play()
 		print("piu piu")
 		var instancia = balla_burbuja.instantiate()
-		
 		instancia.position = animated_sprite_2d.global_position
+		instancia.scale = animated_sprite_2d.global_scale
 		instancia.DIRECTION = DIRECTION
-		print()
 		if contador_disparos<6:
 			animated_sprite_2d.scale = (animated_sprite_2d.scale * 0.9 ) if (escalaMIN < animated_sprite_2d.scale) else escalaMIN
 			collision_shape_2d.scale = (animated_sprite_2d.scale * 0.9) if (escalaMIN < animated_sprite_2d.scale) else escalaMIN
-		
+			 
+		print("nueva instancia")
 		get_parent().add_child(instancia)
 	if event.is_action_pressed("suicidarse"):
 		print("muelto")
