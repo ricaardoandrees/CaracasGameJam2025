@@ -10,6 +10,7 @@ var contador = 1
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	self.global_position.x += 141
 	pass # Replace with function body.
 
 func _process(delta):
@@ -17,8 +18,9 @@ func _process(delta):
 	
 
 func _physics_process(delta: float) -> void:
-	print("fiscas recargadas")
-	print(contador)
+	if contador == 1:
+		print("aaaaa")
+		print(self.global_position)
 	contador+= 1
 	position.x += 4 * DIRECTION
 	

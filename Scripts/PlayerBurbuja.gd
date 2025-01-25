@@ -80,8 +80,10 @@ func _input(event):
 		animated_sprite_2d.play()
 		print("piu piu")
 		var instancia = balla_burbuja.instantiate()
-		instancia.position = global_position
+		instancia.global_position = global_position
 		instancia.scale = animated_sprite_2d.global_scale
+		print(global_position)
+		print(instancia.global_position)
 		instancia.DIRECTION = DIRECTION
 		if contador_disparos<6:
 			animated_sprite_2d.scale = (animated_sprite_2d.scale * 0.9 ) if (escalaMIN < animated_sprite_2d.scale) else escalaMIN
