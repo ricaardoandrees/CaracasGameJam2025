@@ -2,6 +2,7 @@ extends Area2D
 
 var DIRECTION = 1
 var SPEED = 100
+var contador = 1
 #
 #func _init(direction):
 	#print("me creo")
@@ -16,5 +17,8 @@ func _process(delta):
 	
 
 func _physics_process(delta: float) -> void:
+	print("fiscas recargadas")
+	print(contador)
+	contador+= 1
 	position.x += 4 * DIRECTION
 	
