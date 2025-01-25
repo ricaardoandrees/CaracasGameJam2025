@@ -3,36 +3,36 @@
 [ext_resource type="Texture2D" uid="uid://duf0sxnxx63h6" path="res://Assets/Sprites/Estructuras Game Jam 1024x1024.png" id="1_i0g7e"]
 [ext_resource type="Script" path="res://Scripts/bottle.gd" id="1_n506r"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e5qkg"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8u4t6"]
 atlas = ExtResource("1_i0g7e")
-region = Rect2(0, 160, 32, 32)
+region = Rect2(0, 224, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lttxu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ooxlv"]
 atlas = ExtResource("1_i0g7e")
-region = Rect2(32, 160, 32, 32)
+region = Rect2(32, 224, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8whsm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4c6y"]
 atlas = ExtResource("1_i0g7e")
-region = Rect2(64, 160, 32, 32)
+region = Rect2(64, 224, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dcfuv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkqhh"]
 atlas = ExtResource("1_i0g7e")
-region = Rect2(96, 160, 32, 32)
+region = Rect2(96, 224, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u06sl"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_e5qkg")
+"texture": SubResource("AtlasTexture_8u4t6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lttxu")
+"texture": SubResource("AtlasTexture_ooxlv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8whsm")
+"texture": SubResource("AtlasTexture_f4c6y")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dcfuv")
+"texture": SubResource("AtlasTexture_mkqhh")
 }],
 "loop": true,
 "name": &"idle_botella",
@@ -51,7 +51,7 @@ scale = Vector2(0.78125, 0.75)
 sprite_frames = SubResource("SpriteFrames_u06sl")
 animation = &"idle_botella"
 autoplay = "idle_botella"
-frame_progress = 0.929936
+frame_progress = 0.74051
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(257, 149)

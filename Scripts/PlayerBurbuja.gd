@@ -64,6 +64,9 @@ func _physics_process(delta: float) -> void:
 		
 
 
+func muelto():
+	animated_sprite_2d.play("muerte")
+
 
 func _input(event):
 	if event.is_action_pressed("izquierda"):
@@ -77,7 +80,7 @@ func _input(event):
 		animated_sprite_2d.play()
 		print("piu piu")
 		var instancia = balla_burbuja.instantiate()
-		instancia.position = animated_sprite_2d.global_position
+		instancia.position = global_position
 		instancia.scale = animated_sprite_2d.global_scale
 		instancia.DIRECTION = DIRECTION
 		if contador_disparos<6:
