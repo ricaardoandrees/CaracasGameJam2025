@@ -1,7 +1,19 @@
-[gd_scene load_steps=18 format=3 uid="uid://c4xfoq0b1jr8p"]
+[gd_scene load_steps=21 format=3 uid="uid://c4xfoq0b1jr8p"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerBurbuja.gd" id="1_ls6wi"]
 [ext_resource type="Texture2D" uid="uid://cic50vcb62rkm" path="res://Assets/Sprites/Pruebas 2.png" id="2_rlhbf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eghf4"]
+atlas = ExtResource("2_rlhbf")
+region = Rect2(0, 32, 49, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lexg6"]
+atlas = ExtResource("2_rlhbf")
+region = Rect2(49, 32, 49, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ya3a"]
+atlas = ExtResource("2_rlhbf")
+region = Rect2(98, 32, 49, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cdwa2"]
 atlas = ExtResource("2_rlhbf")
@@ -57,6 +69,20 @@ region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uobht"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eghf4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lexg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ya3a")
+}],
+"loop": false,
+"name": &"disparar",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cdwa2")
@@ -125,10 +151,13 @@ z_index = 5
 script = ExtResource("1_ls6wi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, 0)
+position = Vector2(2, 0)
 scale = Vector2(0.64, 0.646667)
 sprite_frames = SubResource("SpriteFrames_uobht")
-animation = &"salto"
+animation = &"disparar"
+frame = 2
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.2207, 0.99313)
 shape = SubResource("CircleShape2D_phpb1")

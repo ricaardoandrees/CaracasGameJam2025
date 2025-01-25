@@ -77,11 +77,10 @@ func _input(event):
 	if event.is_action_pressed("disparar"):
 		contador_disparos+=1
 		little = true
-		animated_sprite_2d.play()
+		animated_sprite_2d.play("disparar")
 		print("piu piu")
 		var instancia = balla_burbuja.instantiate()
 		instancia.global_position = global_position
-		instancia.scale = animated_sprite_2d.global_scale
 
 		instancia.DIRECTION = DIRECTION
 		if contador_disparos<6:
