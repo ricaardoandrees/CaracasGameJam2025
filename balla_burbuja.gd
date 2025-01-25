@@ -17,6 +17,7 @@ func _process(delta):
 	pass
 	
 
+
 func _physics_process(delta: float) -> void:
 	if contador == 1:
 		print("aaaaa")

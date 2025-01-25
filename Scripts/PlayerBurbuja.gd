@@ -82,14 +82,13 @@ func _input(event):
 		var instancia = balla_burbuja.instantiate()
 		instancia.global_position = global_position
 		instancia.scale = animated_sprite_2d.global_scale
-		print(global_position)
-		print(instancia.global_position)
+
 		instancia.DIRECTION = DIRECTION
 		if contador_disparos<6:
 			animated_sprite_2d.scale = (animated_sprite_2d.scale * 0.9 ) if (escalaMIN < animated_sprite_2d.scale) else escalaMIN
 			collision_shape_2d.scale = (animated_sprite_2d.scale * 0.9) if (escalaMIN < animated_sprite_2d.scale) else escalaMIN
 			 
-		print("nueva instancia")
+
 		get_parent().add_child(instancia)
 	if event.is_action_pressed("suicidarse"):
 		print("muelto")
