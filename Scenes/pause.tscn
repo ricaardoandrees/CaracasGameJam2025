@@ -19,71 +19,62 @@ grow_vertical = 2
 color = Color(0.137255, 0.137255, 0.137255, 0.584314)
 
 [node name="TextEdit" type="TextEdit" parent="."]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -81.0
-offset_top = -202.0
-offset_right = 90.0
-offset_bottom = -120.0
+anchors_preset = -1
+anchor_left = 0.456597
+anchor_top = 0.20216
+anchor_right = 0.605035
+anchor_bottom = 0.328704
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_67evq")
 text = "PAUSA"
-
-[node name="TextEdit2" type="TextEdit" parent="."]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -191.0
-offset_top = -129.0
-offset_right = 250.0
-offset_bottom = -47.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 21
-theme_override_styles/normal = SubResource("StyleBoxFlat_67evq")
-text = "Presione [ESCAPE] para quitar la pausa"
+metadata/_edit_use_anchors_ = true
 
 [node name="Menu" type="Button" parent="."]
-visible = false
 anchors_preset = -1
 anchor_left = 0.420573
 anchor_top = 0.372685
 anchor_right = 0.579427
 anchor_bottom = 0.460648
+offset_left = 31.0
+offset_top = 9.0
+offset_right = 31.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 35
 text = "MENU"
-metadata/_edit_use_anchors_ = true
 
 [node name="Controles" type="Button" parent="."]
-visible = false
 anchors_preset = -1
 anchor_left = 0.420573
 anchor_top = 0.466821
 anchor_right = 0.579427
 anchor_bottom = 0.543981
+offset_left = 31.0
+offset_top = 9.0
+offset_right = 31.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "CONTROLES"
-metadata/_edit_use_anchors_ = true
 
 [node name="Salir" type="Button" parent="."]
-visible = false
 anchors_preset = -1
 anchor_left = 0.420573
 anchor_top = 0.550154
 anchor_right = 0.579427
 anchor_bottom = 0.627315
+offset_left = 31.0
+offset_top = 9.0
+offset_right = 31.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "SALIR"
-metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="Controles" to="." method="_on_controles_pressed"]

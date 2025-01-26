@@ -5,7 +5,6 @@ func _physics_process(delta: float) -> void:
 		get_tree().paused= not get_tree().paused
 		$ColorRect.visible= not $ColorRect.visible
 		$TextEdit.visible= not $TextEdit.visible
-		$TextEdit2.visible= not $TextEdit2.visible
 		$Menu.visible= not $Menu.visible
 		$Controles.visible= not $Controles.visible
 		$Salir.visible= not $Salir.visible
