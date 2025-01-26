@@ -1,19 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://bh34wj671mcql"]
 
-[ext_resource type="Texture2D" uid="uid://cnutgbruxb6ju" path="res://icon.svg" id="1_vhowt"]
+[ext_resource type="Texture2D" uid="uid://duf0sxnxx63h6" path="res://Assets/Sprites/Estructuras Game Jam 1024x1024.png" id="1_npsrg"]
 [ext_resource type="PackedScene" uid="uid://jnggkvfy258f" path="res://Scenes/killzone.tscn" id="2_ap1s1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n0qag"]
-size = Vector2(125.356, 131.649)
+size = Vector2(28.2051, 13.4336)
 
 [node name="obtaculo" type="Sprite2D"]
-position = Vector2(115, 112)
+position = Vector2(306, 221)
 scale = Vector2(0.478637, 0.372202)
-texture = ExtResource("1_vhowt")
+texture = ExtResource("1_npsrg")
+region_enabled = true
+region_rect = Rect2(605.795, 156.741, 41.1033, 18.7992)
 
 [node name="killzone" parent="." instance=ExtResource("2_ap1s1")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(-51, -20.6566)
+position = Vector2(-52.567, -20.6566)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_n0qag")

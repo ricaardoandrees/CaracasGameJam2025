@@ -5,9 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://jnggkvfy258f" path="res://Scenes/killzone.tscn" id="2_jbmdn"]
 [ext_resource type="Texture2D" uid="uid://cigwmhr58c6x2" path="res://Assets/Sprites/Enemigos Game Jam 1024x1024.png" id="3_lewgi"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7pq5y"]
-size = Vector2(298.925, 224.008)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_y4e5j"]
 atlas = ExtResource("3_lewgi")
 region = Rect2(576, 0, 64, 93)
@@ -139,21 +136,32 @@ animations = [{
 "speed": 4.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_516hx"]
+radius = 124.704
+height = 263.554
+
 [node name="Enemigo" type="Node2D"]
 z_index = 5
 position = Vector2(-52, -21)
 rotation = -0.00908286
 script = ExtResource("1_po37d")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(47.9925, -54.6072)
+scale = Vector2(5.44185, 4.01875)
+sprite_frames = SubResource("SpriteFrames_4l80b")
+animation = &"idle"
+autoplay = "idle"
+
 [node name="killzone" parent="." instance=ExtResource("2_jbmdn")]
 collision_layer = 2
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(-21.0657, -54.9415)
+position = Vector2(-20.7197, -52.7262)
 rotation = 0.017193
 scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_7pq5y")
+shape = SubResource("CapsuleShape2D_516hx")
 
 [node name="RayCastDere" type="RayCast2D" parent="killzone"]
 target_position = Vector2(61, 1)
@@ -169,10 +177,3 @@ target_position = Vector2(-62, 0)
 
 [node name="RayCastArr" type="RayCast2D" parent="killzone"]
 target_position = Vector2(0, -64)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(47.9925, -54.6072)
-scale = Vector2(5.44185, 4.01875)
-sprite_frames = SubResource("SpriteFrames_4l80b")
-animation = &"muerte"
-autoplay = "idle"
