@@ -19,6 +19,7 @@ animations = [{
 }]
 
 [node name="Enemigo" type="Node2D"]
+z_index = 5
 rotation = -0.00908286
 script = ExtResource("1_po37d")
 
