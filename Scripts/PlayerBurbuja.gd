@@ -14,7 +14,7 @@ var escalaMIN : Vector2
 var contador_disparos: int= 0
 var little: bool = false
 var escalaINICIAL : Vector2
-
+var jumpwall: int = 200
 
 
 func _ready():
@@ -58,6 +58,13 @@ func _physics_process(delta: float) -> void:
 	elif Input.is_action_just_released("inflar")  and  (not (animated_sprite_2d.animation == "muerte")):
 			animated_sprite_2d.stop()
 			peso = 1
+	if $Salto.is_colliding() and Input.is_action_just_pressed("saltowall"):
+		velocity.y=-jumpwall
+		pass
+	if velocity.x>0:
+		$Salto.target_position.x = 17
+	if velocity.x<0:
+		$Salto.target_position.x = 17
 
 
 
