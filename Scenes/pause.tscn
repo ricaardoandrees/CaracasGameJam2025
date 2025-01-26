@@ -7,6 +7,7 @@ draw_center = false
 
 [node name="Pause" type="CanvasLayer"]
 process_mode = 3
+visible = false
 script = ExtResource("1_714a1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -19,6 +20,7 @@ grow_vertical = 2
 color = Color(0.137255, 0.137255, 0.137255, 0.584314)
 
 [node name="TextEdit" type="TextEdit" parent="."]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -35,6 +37,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_67evq")
 text = "PAUSA"
 
 [node name="TextEdit2" type="TextEdit" parent="."]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -51,6 +54,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_67evq")
 text = "Presione [ESCAPE] para quitar la pausa"
 
 [node name="Menu" type="Button" parent="."]
+visible = false
 anchors_preset = -1
 anchor_left = 0.420573
 anchor_top = 0.372685
@@ -61,6 +65,7 @@ text = "MENU"
 metadata/_edit_use_anchors_ = true
 
 [node name="Controles" type="Button" parent="."]
+visible = false
 anchors_preset = -1
 anchor_left = 0.420573
 anchor_top = 0.466821
@@ -71,6 +76,7 @@ text = "CONTROLES"
 metadata/_edit_use_anchors_ = true
 
 [node name="Salir" type="Button" parent="."]
+visible = false
 anchors_preset = -1
 anchor_left = 0.420573
 anchor_top = 0.550154

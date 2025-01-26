@@ -23,3 +23,6 @@ func _on_controles_pressed() -> void:
 
 func _on_salir_pressed() -> void:
 	get_tree().quit()
+
+
+#xd
