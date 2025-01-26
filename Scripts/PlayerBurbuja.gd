@@ -94,3 +94,6 @@ func _input(event):
 func _on_animated_sprite_2d_animation_finished():
 	if animated_sprite_2d.animation == "muerte":
 		get_tree().reload_current_scene()
+
+func menu_pausa():
+	pass
