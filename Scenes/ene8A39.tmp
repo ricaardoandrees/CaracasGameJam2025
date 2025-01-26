@@ -85,7 +85,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("1_jmcj5")
 }],
-"loop": false,
+"loop": true,
 "name": &"default",
 "speed": 5.0
 }, {
@@ -151,6 +151,7 @@ position = Vector2(47.9925, -54.6072)
 scale = Vector2(5.44185, 4.01875)
 sprite_frames = SubResource("SpriteFrames_4l80b")
 animation = &"idle"
+autoplay = "idle"
 
 [node name="killzone" parent="." instance=ExtResource("2_jbmdn")]
 collision_layer = 2

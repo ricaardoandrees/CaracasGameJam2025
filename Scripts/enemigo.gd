@@ -11,6 +11,9 @@ extends Node2D
 
 var direction = 1
 
+func _ready():
+	animated_sprite_2d.play("idle")
+
 
 func _process(delta):
 	if (ray_cast_dere.is_colliding()) or ( not ray_cast_dere_piso.is_colliding()):
@@ -20,14 +23,11 @@ func _process(delta):
 		direction = 1
 		animated_sprite_2d.flip_h = true
 	position.x += delta * direction * 60
-
+	print("aaaa")
+	print(animated_sprite_2d.animation)
+	if not animated_sprite_2d.is_playing():
+		queue_free()
 	
-
-func animation_finished() -> void:
-	print("afdafdsaaaaa")
-	if animated_sprite_2d.animation == "muerte":
-		print("done attacking")
-
 
 
 	
