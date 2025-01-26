@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://6uyc4bf3elao"]
+[gd_scene load_steps=3 format=3 uid="uid://6uyc4bf3elao"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_1vpo3"]
+[ext_resource type="Texture2D" uid="uid://m1f0khql0eqb" path="res://Assets/Sprites/lost_kingdom_3840x2160.png" id="2_c3oyq"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -11,14 +12,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1vpo3")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.144063, 0.144063, 0.144063, 1)
+texture = ExtResource("2_c3oyq")
+expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
