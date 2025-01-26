@@ -855,6 +855,11 @@ _data = {
 [node name="Game" type="Node2D"]
 position = Vector2(-141, 7)
 
+[node name="LostKingdom1280x720" type="Sprite2D" parent="."]
+position = Vector2(1535, -459)
+scale = Vector2(2.67656, 2.59306)
+texture = ExtResource("12_l1hjm")
+
 [node name="Pause" parent="." instance=ExtResource("8_wn5ot")]
 
 [node name="PlayerBurbuja" parent="." instance=ExtResource("3_dc6kq")]
@@ -1074,8 +1079,3 @@ position = Vector2(2149, -915)
 [node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
-
-[node name="LostKingdom1280x720" type="Sprite2D" parent="."]
-position = Vector2(1529.5, -459)
-scale = Vector2(2.66797, 2.59306)
-texture = ExtResource("12_l1hjm")
