@@ -150,7 +150,6 @@ script = ExtResource("1_po37d")
 position = Vector2(47.9925, -54.6072)
 scale = Vector2(5.44185, 4.01875)
 sprite_frames = SubResource("SpriteFrames_4l80b")
-animation = &"idle"
 
 [node name="killzone" parent="." instance=ExtResource("2_jbmdn")]
 collision_layer = 2
