@@ -1,6 +1,5 @@
-[gd_scene load_steps=22 format=3 uid="uid://ey8g66byjq6j"]
+[gd_scene load_steps=21 format=3 uid="uid://ey8g66byjq6j"]
 
-[ext_resource type="Texture2D" uid="uid://cnutgbruxb6ju" path="res://icon.svg" id="1_jmcj5"]
 [ext_resource type="Script" path="res://Scripts/enemigo.gd" id="1_po37d"]
 [ext_resource type="PackedScene" uid="uid://jnggkvfy258f" path="res://Scenes/killzone.tscn" id="2_jbmdn"]
 [ext_resource type="Texture2D" uid="uid://cigwmhr58c6x2" path="res://Assets/Sprites/Enemigos Game Jam 1024x1024.png" id="3_lewgi"]
@@ -83,14 +82,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_jmcj5")
-}],
-"loop": false,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_n26wt")
 }, {
 "duration": 1.0,
@@ -150,6 +141,8 @@ script = ExtResource("1_po37d")
 position = Vector2(47.9925, -54.6072)
 scale = Vector2(5.44185, 4.01875)
 sprite_frames = SubResource("SpriteFrames_4l80b")
+animation = &"ataque"
+autoplay = "idle"
 
 [node name="killzone" parent="." instance=ExtResource("2_jbmdn")]
 collision_layer = 2

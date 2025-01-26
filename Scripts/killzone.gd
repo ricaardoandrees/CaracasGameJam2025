@@ -8,7 +8,6 @@ func _ready():
 func _on_body_entered(body):
 	print(typeof(body))
 	if(body.name == "PlayerBurbuja"):
-		animated_sprite_2d.play("ataque")
 		body.muelto()
 		
 
