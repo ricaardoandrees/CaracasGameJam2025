@@ -144,7 +144,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_phpb1"]
-radius = 8.0
+radius = 6.52864
 
 [node name="Burbujita" type="CharacterBody2D"]
 z_index = 5
@@ -152,12 +152,14 @@ scale = Vector2(1.5527, 1.65811)
 script = ExtResource("1_ls6wi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(2, 0)
-scale = Vector2(0.64, 0.646667)
+position = Vector2(2.57616, 0)
+scale = Vector2(0.724646, 0.646667)
 sprite_frames = SubResource("SpriteFrames_uobht")
 animation = &"disparar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.57616, 5.96046e-08)
+rotation = 0.103698
 scale = Vector2(1.2207, 0.99313)
 shape = SubResource("CircleShape2D_phpb1")
 
