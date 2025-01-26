@@ -163,4 +163,7 @@ rotation = 0.103698
 scale = Vector2(1.2207, 0.99313)
 shape = SubResource("CircleShape2D_phpb1")
 
+[node name="Salto" type="RayCast2D" parent="."]
+target_position = Vector2(16.101, -0.603096)
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
