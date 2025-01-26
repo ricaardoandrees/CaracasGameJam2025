@@ -1,4 +1,5 @@
 extends Area2D
+@onready var animated_sprite_2d = $"../AnimatedSprite2D"
 
 
 func _ready():
@@ -7,9 +8,13 @@ func _ready():
 func _on_body_entered(body):
 	print(typeof(body))
 	if(body.name == "PlayerBurbuja"):
+		animated_sprite_2d.play("ataque")
 		body.muelto()
 		
 
 
 func _on_area_entered(area):
-	get_parent().queue_free()
+	animated_sprite_2d.play("muerte")
+
+
+		
