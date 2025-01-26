@@ -5,7 +5,7 @@ func _on_jugar_pressed() -> void:
 
 
 func _on_instrucciones_pressed() -> void:
-	pass
+	get_tree().change_scene_to_file("res://Scenes/control.tscn") 
 
 
 func _on_salir_pressed() -> void:

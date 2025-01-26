@@ -163,4 +163,4 @@ shape = SubResource("RectangleShape2D_frpfn")
 position = Vector2(12, -2)
 sprite_frames = SubResource("SpriteFrames_elo03")
 autoplay = "default"
-frame_progress = 0.637733
+frame_progress = 0.527306

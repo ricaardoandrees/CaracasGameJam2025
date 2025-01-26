@@ -48,22 +48,6 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 35
 text = "MENU"
 
-[node name="Controles" type="Button" parent="."]
-visible = false
-anchors_preset = -1
-anchor_left = 0.420573
-anchor_top = 0.466821
-anchor_right = 0.579427
-anchor_bottom = 0.543981
-offset_left = 31.0
-offset_top = 9.0
-offset_right = 31.0
-offset_bottom = 9.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 30
-text = "CONTROLES"
-
 [node name="Salir" type="Button" parent="."]
 visible = false
 anchors_preset = -1
@@ -71,15 +55,14 @@ anchor_left = 0.420573
 anchor_top = 0.550154
 anchor_right = 0.579427
 anchor_bottom = 0.627315
-offset_left = 31.0
-offset_top = 9.0
-offset_right = 31.0
-offset_bottom = 9.0
+offset_left = 32.4999
+offset_top = -37.4998
+offset_right = 32.4999
+offset_bottom = -37.4998
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "SALIR"
 
 [connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
-[connection signal="pressed" from="Controles" to="." method="_on_controles_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

@@ -1,0 +1,111 @@
+[gd_scene load_steps=5 format=3 uid="uid://oi3i226ksmpd"]
+
+[ext_resource type="Script" path="res://control.gd" id="1_yq7pd"]
+[ext_resource type="Texture2D" uid="uid://dq45hn6l1eggp" path="res://Assets/Sprites/Keyboard Letters and Symbols.png" id="2_6xixk"]
+[ext_resource type="Texture2D" uid="uid://b3f66mf2gcc0b" path="res://Assets/Sprites/Keyboard Extras.png" id="3_yscor"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dg4c0"]
+draw_center = false
+
+[node name="Controles" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yq7pd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.117647, 0.117647, 0.117647, 0.6)
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -528.0
+offset_right = 32.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxTexture_dg4c0")
+text = "                                                                     Movimiento 
+                                                                     Salto
+                                                                     Disparo
+                                                                     Inflarse
+                                                                      Pausa"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(321, 152)
+scale = Vector2(4.125, 4.16667)
+texture = ExtResource("2_6xixk")
+region_enabled = true
+region_rect = Rect2(0, 32.3263, 16.4298, 15.5065)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(374, 105)
+scale = Vector2(4.125, 4.16667)
+texture = ExtResource("2_6xixk")
+region_enabled = true
+region_rect = Rect2(97.355, 66.3287, 13.3421, 12.8289)
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(380, 152)
+scale = Vector2(4.125, 4.16667)
+texture = ExtResource("2_6xixk")
+region_enabled = true
+region_rect = Rect2(33.7234, 65.3024, 14.3684, 13.8553)
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(437, 149)
+scale = Vector2(4.125, 4.16667)
+texture = ExtResource("2_6xixk")
+region_enabled = true
+region_rect = Rect2(49.6313, 32.4603, 12.3158, 13.8553)
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(384, 206)
+scale = Vector2(4.125, 4.16667)
+texture = ExtResource("3_yscor")
+region_enabled = true
+region_rect = Rect2(62.9734, 30.6445, 35.4079, 17.4474)
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(378, 367)
+scale = Vector2(4.125, 4.16667)
+texture = ExtResource("3_yscor")
+region_enabled = true
+region_rect = Rect2(38.8549, -0.145008, 18.9868, 14.8816)
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(384, 312)
+scale = Vector2(4.125, 4.16667)
+texture = ExtResource("2_6xixk")
+region_enabled = true
+region_rect = Rect2(1.39441, 63.2497, 12.8289, 15.3947)
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(383, 260)
+scale = Vector2(4.125, 4.16667)
+texture = ExtResource("2_6xixk")
+region_enabled = true
+region_rect = Rect2(64.5128, 33.9997, 14.3684, 13.8553)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+offset_right = 69.0
+offset_bottom = 31.0
+theme_override_font_sizes/font_size = 40
+text = "VOLVER"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

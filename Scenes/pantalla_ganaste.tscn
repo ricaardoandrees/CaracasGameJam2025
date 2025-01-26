@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwm1v4r6pv5on"]
+
+[ext_resource type="Script" path="res://Scenes/pantalla_ganaste.gd" id="1_34i15"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4vxbv"]
+draw_center = false
+
+[node name="Pantalla Ganaste" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_34i15")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.117647, 0.117647, 0.117647, 0.6)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.5
+offset_top = -50.0
+offset_right = 94.5
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "OK"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -514.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxTexture_4vxbv")
+text = "                                       Has ganado, felicidades!"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
