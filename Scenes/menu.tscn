@@ -39,11 +39,11 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "JUGAR"
 
-[node name="Instrucciones" type="Button" parent="VBoxContainer"]
+[node name="Controles" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 38
-text = "INSTRUCCIONES"
+text = "CONTROLES"
 
 [node name="Salir" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -51,5 +51,5 @@ theme_override_font_sizes/font_size = 40
 text = "SALIR"
 
 [connection signal="pressed" from="VBoxContainer/Jugar" to="." method="_on_jugar_pressed"]
-[connection signal="pressed" from="VBoxContainer/Instrucciones" to="." method="_on_instrucciones_pressed"]
+[connection signal="pressed" from="VBoxContainer/Controles" to="." method="_on_instrucciones_pressed"]
 [connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]
